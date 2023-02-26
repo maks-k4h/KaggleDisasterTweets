@@ -1,7 +1,7 @@
 import re
 
 
-def process_tweet(tweet, lower=True, rm_weblinks=True, keep_usernames=True, keep_hashtags=True):
+def process_tweet(tweet, lower=True, rm_weblinks=False, keep_usernames=True, keep_hashtags=True):
     """
     Removes and modifies the tweet.
 
