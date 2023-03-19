@@ -1,0 +1,13 @@
+SCORE 0.80631
+    GloVe 6B, 100
+    Dropout(.5)
+    Unidirectional LSTM (50, 1 layer)
+    Dropout(.3)
+    Dense
+
+    Training loss: .3897
+    Training accuracy: .8379
+    Test accuracy: .8228
+
+    Optimizer: SGD, lr=5e-1, batch_size=32
+

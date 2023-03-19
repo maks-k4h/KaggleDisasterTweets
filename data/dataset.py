@@ -3,7 +3,7 @@ import pandas as pd
 
 
 class DisasterData(data.Dataset):
-    def __init__(self, split='all', train_fraction=.9, path=''):
+    def __init__(self, split='all', train_fraction=.9, path='', tweet_prep_fn=None):
         """
 
         :param split:
@@ -11,6 +11,7 @@ class DisasterData(data.Dataset):
             train — load train split
             valid — load validation split
             test — load test data
+            tweet_prep_fn — tweet preprocessing function
         :return:
         """
 
@@ -30,6 +31,9 @@ class DisasterData(data.Dataset):
             self._data = pd.read_csv(path + 'test.csv')
         else:
             raise Exception("Unknown data split requested")
+
+        if tweet_prep_fn:
+            self._data['text'] = self._data['text'].apply(tweet_prep_fn)
 
     def __len__(self):
         return self._data.shape[0]
