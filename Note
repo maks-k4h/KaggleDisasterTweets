@@ -11,3 +11,18 @@ SCORE 0.80631
 
     Optimizer: SGD, lr=5e-1, batch_size=32
 
+SCORE 0.81121
+    GloVe Tweet 27B, 200
+    Dropout(.7)
+    Bidirectional LSTM, (50, 2 layers)
+    Dropout(.5)
+    Bidirectional LSTM, (50, 2 layers)
+    Dropout(.5)
+    Dense(100 to 1)
+
+    Training loss: .3912
+    Training accuracy: .8273
+    Test accuracy: .8333
+
+    Optimizer: Adam, lr=1e-4, batch_size=32
+    130 epochs...
